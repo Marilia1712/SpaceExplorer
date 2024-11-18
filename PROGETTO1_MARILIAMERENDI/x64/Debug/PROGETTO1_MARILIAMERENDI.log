@@ -1,2 +1,25 @@
-﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  PROGETTO1_MARILIAMERENDI.vcxproj -> C:\Users\Marilia\UNI\COMPUTER GRAPHICS\PROGETTO1_MARILIAMERENDI\x64\Debug\PROGETTO1_MARILIAMERENDI.exe
+﻿  main.cpp
+C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\PROGETTO1_MARILIAMERENDI\main.cpp(26,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\PROGETTO1_MARILIAMERENDI\main.cpp(62,35): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\PROGETTO1_MARILIAMERENDI\main.cpp(63,36): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\PROGETTO1_MARILIAMERENDI\main.cpp(124,31): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\PROGETTO1_MARILIAMERENDI\main.cpp(125,32): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\PROGETTO1_MARILIAMERENDI\main.cpp(153,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\PROGETTO1_MARILIAMERENDI\main.cpp(167,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  PROGETTO1_MARILIAMERENDI.vcxproj -> C:\Users\wfaff\Desktop\PROGETTO1_MARILIAMERENDI\x64\Debug\PROGETTO1_MARILIAMERENDI.exe

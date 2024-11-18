@@ -20,7 +20,9 @@ int i, j;
 float w_update, h_update;
 float deltaTime = 0.0f;
 float frame;
-float lastFrame;
+float lastFrame = 0.0f;
+float refreshTime = 0.001f;
+
 float r = 0.0, g = 0.2, b = 1.0;
 int height = 1000, width = 1000;
 vec2 resolution;
@@ -150,24 +152,27 @@ int main(void)
     {
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
-        frame++;
-        
-        /* Render here */
-        my_interface();
 
-        if (restart_game) {
-            restart();
+        if (deltaTime > refreshTime) {
+            lastFrame = currentFrame;
+            frame++;
+
+            /* Render here */
+            my_interface();
+
+            if (restart_game) {
+                restart();
+            }
+
+            render(currentFrame, frame);
+
+            ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+            /* Swap front and back buffers */
+            glfwSwapBuffers(window);
+            /* Poll for and process events */
+            glfwPollEvents();
         }
-
-        render(currentFrame, frame);
-
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData()); 
-
-        /* Swap front and back buffers */
-        glfwSwapBuffers(window);
-        /* Poll for and process events */
-        glfwPollEvents();
     }
 
     glDeleteProgram(programId);
